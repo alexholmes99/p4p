@@ -1,2 +1,5 @@
 <h1>Fighters List</h1>
-<p><%= @fighters.first.first_name %></p>
+<%@fighters.each do |fighter| %>
+<p><%= fighter.full_name %></p>
+<p><%= fighter.division_string %></p>
+<%end%>
