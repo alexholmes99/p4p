@@ -9,6 +9,8 @@ const Container = styled.div`
   text-align: center;
   border: solid black 1px;
   border-radius: 4px;
+
+  background-color: white;
   height: 800px;
   width: 50%;
   align-content: center;
