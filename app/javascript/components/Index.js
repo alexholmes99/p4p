@@ -1,8 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
-function Index(props) {
-  return <div>Fighters</div>;
+import Logo from "./Logo";
+import RankContainer from "./RankContainer";
+
+function Index() {
+  return (
+    <>
+      <Logo titleText="Title" />
+      <RankContainer />
+    </>
+  );
 }
 
-Index.propTypes = {};
 export default Index;
