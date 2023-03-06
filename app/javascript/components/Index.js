@@ -5,7 +5,7 @@ import RankContainer from "./RankContainer";
 function Index() {
   return (
     <>
-      <Logo titleText="Title" />
+      <Logo titleText="P4P" />
       <RankContainer />
     </>
   );
