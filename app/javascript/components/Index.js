@@ -13,7 +13,7 @@ function Index() {
 }
 
 const Wrapper = styled.div`
-  background: #ee352a;
+  background: #ff3822;
   min-height: 100vh;
 `;
 

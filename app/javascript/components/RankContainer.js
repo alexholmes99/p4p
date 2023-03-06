@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Card from "./Card";
 
-function RankContainer(props) {
-  return <Container />;
+function RankContainer() {
+  return (
+    <Container>
+      <Card />
+    </Container>
+  );
 }
 
 const Container = styled.div`
