@@ -29,16 +29,15 @@ const FighterName = styled.div`
 `;
 
 const Division = styled.div`
-  padding: 0;
   margin: 0;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 500;
 `;
 
 const Info = styled.div`
   display: inline;
-  text-align: right;
-  padding: 8px;
+  align-content: left;
+  padding: 70px 8px;
 `;
 
 const FighterIcon = styled.img`
