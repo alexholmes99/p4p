@@ -7,7 +7,7 @@ function RankContainer(props) {
 
   const renderFighterCards = () => {
     return fighters.map((fighter) => {
-      return <Card />;
+      return <Card fighter={fighter} />;
     });
   };
 
