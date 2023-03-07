@@ -5,27 +5,12 @@ import Jones from "../../assets/images/john_jones.png";
 function Card(props) {
   const { fighter } = props;
   console.log(fighter);
-
-  const fullName = () => {
-    return `${fighter.first_name} ${fighter.last_name}`;
-  };
-
-  const division = () => {
-    const division = fighter.division.replace("_", " ");
-    const formatted = division.toLowerCase().split(" ");
-    for (var i = 0; i < formatted.length; i++) {
-      formatted[i] =
-        formatted[i].charAt(0).toUpperCase() + formatted[i].slice(1);
-    }
-    return formatted.join(" ");
-  };
-
   return (
     <Container>
-      <FighterIcon src={Jones} />
+      <FighterIcon src={fighter.avatar} />
       <Info>
-        <FighterName>{fullName()}</FighterName>
-        <Division>{division()}</Division>
+        <FighterName>{fighter.fullname}</FighterName>
+        <Division>{fighter.division}</Division>
       </Info>
     </Container>
   );
