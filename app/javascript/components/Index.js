@@ -3,11 +3,12 @@ import Logo from "./Logo";
 import RankContainer from "./RankContainer";
 import styled from "styled-components";
 
-function Index() {
+function Index(props) {
+  const { fighters } = props;
   return (
     <Wrapper>
       <Logo titleText="P4P" />
-      <RankContainer />
+      <RankContainer fighters={fighters} />
     </Wrapper>
   );
 }
