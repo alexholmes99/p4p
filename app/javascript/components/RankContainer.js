@@ -8,8 +8,8 @@ function RankContainer(props) {
   const { fighters } = props;
   const [fighterArray, setFighterArray] = useState(fighters);
   const renderFighterCards = (array) => {
-    return array.map((fighter) => {
-      return <Card fighter={fighter} />;
+    return array.map((fighter, index) => {
+      return <Card fighter={fighter} index={index} />;
     });
   };
 
@@ -27,11 +27,11 @@ function RankContainer(props) {
     }
 
     const newFighterList = Array.from(fighterArray);
-    const fighter = fighterArray[source.index - 1];
+    const fighter = fighterArray[draggableId];
     console.log(fighter);
 
-    newFighterList.splice(source.index - 1, 1);
-    newFighterList.splice(destination.index - 1, 0, fighter);
+    newFighterList.splice(source.index, 1);
+    newFighterList.splice(destination.index, 0, fighter);
     console.log(newFighterList);
     setFighterArray(newFighterList);
   };

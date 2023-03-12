@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Draggable } from "react-beautiful-dnd";
 
 function Card(props) {
-  const { fighter } = props;
+  const { fighter, index } = props;
 
   return (
-    <Draggable draggableId={`${fighter.id}`} index={fighter.id}>
+    <Draggable draggableId={`${index}`} index={index}>
       {(provided) => (
         <div
           ref={provided.innerRef}
