@@ -4,7 +4,8 @@ class FightersController < ApplicationController
     @fighters = Fighter.all.map {|fighter| {
       "fullname": fighter.full_name,
       "division": fighter.division_string,
-      "avatar": url_for(fighter.avatar)   
+      "avatar": url_for(fighter.avatar),
+      "id": fighter.id   
     }}
   end
 end

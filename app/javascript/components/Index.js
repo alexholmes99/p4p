@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 function Index(props) {
   const { fighters } = props;
+
   return (
     <Wrapper>
       <Logo titleText="P4P" />

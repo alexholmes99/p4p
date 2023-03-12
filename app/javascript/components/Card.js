@@ -1,18 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import Jones from "../../assets/images/john_jones.png";
+import { Draggable } from "react-beautiful-dnd";
 
 function Card(props) {
   const { fighter } = props;
-  console.log(fighter);
+
   return (
-    <Container>
-      <FighterIcon src={fighter.avatar} />
-      <Info>
-        <FighterName>{fighter.fullname}</FighterName>
-        <Division>{fighter.division}</Division>
-      </Info>
-    </Container>
+    <Draggable draggableId={`${fighter.id}`} index={fighter.id}>
+      {(provided) => (
+        <div
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+        >
+          <Container>
+            <FighterIcon src={fighter.avatar} />
+            <Info>
+              <FighterName>{fighter.fullname}</FighterName>
+              <Division>{fighter.division}</Division>
+            </Info>
+          </Container>
+        </div>
+      )}
+    </Draggable>
   );
 }
 
@@ -21,6 +31,7 @@ const Container = styled.div`
   width: 100%;
   height: fit-content;
   display: flex;
+  background-color: white;
 `;
 
 const FighterName = styled.div`
