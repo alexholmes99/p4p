@@ -32,7 +32,7 @@ function Card(props) {
 const Container = styled.div`
   border: solid black 1px;
   width: 100%;
-  height: fit-content;
+  height: 140px;
   display: flex;
   background-color: white;
 `;
