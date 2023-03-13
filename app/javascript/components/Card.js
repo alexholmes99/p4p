@@ -5,7 +5,7 @@ import { Draggable } from "react-beautiful-dnd";
 function Card(props) {
   const { fighter, index } = props;
   const fighterRank = () => {
-    return index === 0 ? "Champ" : index + 1;
+    return index === 0 ? "Champ" : index;
   };
   return (
     <Draggable draggableId={`${index}`} index={index}>
@@ -37,9 +37,7 @@ const Container = styled.div`
   background-color: white;
 `;
 
-const Rank = styled.div`
-  margin-right: -10%;
-`;
+const Rank = styled.div``;
 
 const FighterName = styled.div`
   padding: 0;
