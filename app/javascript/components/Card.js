@@ -31,9 +31,10 @@ function Card(props) {
 
 const Container = styled.div`
   position: relative;
-  border: solid black 1px;
-  width: 100%;
-  max-width: 500px;
+  border: solid black 4px;
+  border-radius: 4px;
+  max-width: 100%;
+  min-width: 500px;
   height: 140px;
   display: flex;
   background-color: white;

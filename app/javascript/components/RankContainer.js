@@ -56,13 +56,11 @@ function RankContainer(props) {
 
 const Container = styled.div`
   text-align: center;
-  border: solid black 1px;
-  border-radius: 4px;
 
-  background-color: white;
+  background-color: #ff3822;
   height: 800px;
   max-width: 45%;
-  min-width: 500px;
+  min-width: 532px;
   align-content: center;
   margin: auto;
   overflow-y: scroll;
