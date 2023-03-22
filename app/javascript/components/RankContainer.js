@@ -61,7 +61,8 @@ const Container = styled.div`
 
   background-color: white;
   height: 800px;
-  width: 45%;
+  max-width: 45%;
+  min-width: 500px;
   align-content: center;
   margin: auto;
   overflow-y: scroll;
