@@ -5,7 +5,7 @@ import { Draggable } from "react-beautiful-dnd";
 function Card(props) {
   const { fighter, index } = props;
   const fighterRank = () => {
-    return index === 0 ? "Champ" : index;
+    return index === 0 ? "Champ" : "#" + index;
   };
   return (
     <Draggable draggableId={`${index}`} index={index}>
@@ -30,14 +30,24 @@ function Card(props) {
 }
 
 const Container = styled.div`
+  position: relative;
   border: solid black 1px;
   width: 100%;
+  max-width: 500px;
   height: 140px;
   display: flex;
   background-color: white;
+  padding: 4px;
 `;
 
-const Rank = styled.div``;
+const Rank = styled.div`
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+`;
 
 const FighterName = styled.div`
   padding: 0;
@@ -59,8 +69,8 @@ const Info = styled.div`
 `;
 
 const FighterIcon = styled.img`
-  max-width: 15%;
   padding: 8px;
+  margin-left: 0%;
 `;
 
 export default Card;
