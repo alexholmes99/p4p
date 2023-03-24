@@ -33,11 +33,10 @@ function NewRankContainer(props) {
 
     const newFighterList = Array.from(fighterArray);
     const fighter = fighterArray[draggableId];
-    console.log(fighter);
 
     newFighterList.splice(source.index, 1);
     newFighterList.splice(destination.index, 0, fighter);
-    console.log(newFighterList);
+
     setFighterArray(newFighterList);
   };
 
@@ -69,6 +68,7 @@ const Container = styled.div`
   min-width: 532px;
   background: #901d10;
   margin: 16px auto;
+  overflow: hidden;
 `;
 
 export default NewRankContainer;

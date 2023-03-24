@@ -67,7 +67,6 @@ const Info = styled.div`
 `;
 
 const FighterIcon = styled.img`
-  // padding: 8px;
   height: 100%;
   margin-left: 0%;
 `;
