@@ -10,20 +10,18 @@ function Card(props) {
   return (
     <Draggable draggableId={`${index}`} index={index}>
       {(provided) => (
-        <div
+        <Container
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <Container>
-            <FighterIcon src={fighter.avatar} />
-            <Info>
-              <FighterName>{fighter.fullname}</FighterName>
-              <Division>{fighter.division}</Division>
-            </Info>
-            <Rank>{fighterRank()}</Rank>
-          </Container>
-        </div>
+          <FighterIcon src={fighter.avatar} />
+          <Info>
+            <FighterName>{fighter.fullname}</FighterName>
+            <Division>{fighter.division}</Division>
+          </Info>
+          <Rank>{fighterRank()}</Rank>
+        </Container>
       )}
     </Draggable>
   );
@@ -32,10 +30,10 @@ function Card(props) {
 const Container = styled.div`
   position: relative;
   border: solid black 4px;
-  border-radius: 4px;
+  border-radius: 8px;
   max-width: 100%;
   min-width: 500px;
-  height: 140px;
+  height: 100%;
   display: flex;
   background-color: white;
   padding: 4px;
@@ -44,7 +42,6 @@ const Container = styled.div`
 const Rank = styled.div`
   margin: 0;
   padding: 0;
-  height: fit-content;
   position: absolute;
   right: 15px;
   top: 15px;
@@ -66,11 +63,12 @@ const Division = styled.div`
 const Info = styled.div`
   display: inline;
   align-content: left;
-  padding: 70px 8px;
+  text-align: center;
 `;
 
 const FighterIcon = styled.img`
-  padding: 8px;
+  // padding: 8px;
+  height: 100%;
   margin-left: 0%;
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
-import RankContainer from "./RankContainer";
 import styled from "styled-components";
+import NewRankContainer from "./NewRankContainer";
 
 function Home(props) {
   const { fighters } = props;
@@ -9,7 +9,7 @@ function Home(props) {
   return (
     <Wrapper>
       <Logo titleText="P4P" />
-      <RankContainer fighters={fighters} />
+      <NewRankContainer fighters={fighters} />
     </Wrapper>
   );
 }

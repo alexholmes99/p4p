@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
-import { DragDropContext } from "react-beautiful-dnd";
-import { Droppable } from "react-beautiful-dnd";
 import { useState } from "react";
-function RankContainer(props) {
+import { Droppable } from "react-beautiful-dnd";
+import { DragDropContext } from "react-beautiful-dnd";
+
+function NewRankContainer(props) {
   const { fighters } = props;
   const [fighterArray, setFighterArray] = useState(fighters);
   const renderFighterCards = (array) => {
     return array.map((fighter, index) => {
-      return <Card fighter={fighter} index={index} />;
+      return (
+        <CardHolder>
+          <Card fighter={fighter} index={index} />
+        </CardHolder>
+      );
     });
   };
 
@@ -37,39 +42,33 @@ function RankContainer(props) {
   };
 
   return (
-    <Wrapper>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId={`1`}>
-          {(provided) => (
-            <div
-              ref={provided.innerRef}
-              {...provided.droppableProps}
-              {...provided.dragHandleProps}
-            >
-              <Container>{renderFighterCards(fighterArray)}</Container>
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </DragDropContext>
-    </Wrapper>
+    <DragDropContext onDragEnd={onDragEnd}>
+      <Droppable droppableId={`1`}>
+        {(provided) => (
+          <Container
+            ref={provided.innerRef}
+            {...provided.droppableProps}
+            {...provided.dragHandleProps}
+          >
+            {renderFighterCards(fighterArray)}
+            {provided.placeholder}
+          </Container>
+        )}
+      </Droppable>
+    </DragDropContext>
   );
 }
 
-const Wrapper = styled.div`
-  padding-top: 2%;
-  margin-bottom: 10%;
-  height: 80%;
+const CardHolder = styled.div`
+  height: 8.5%;
+  margin-bottom: 20px;
 `;
 const Container = styled.div`
-  text-align: center;
-  max-height: 1000px;
-  background-color: #cd6155;
+  height: 85%;
   max-width: 45%;
   min-width: 532px;
-
-  margin: auto;
-  overflow: hidden;
+  background: #901d10;
+  margin: 16px auto;
 `;
 
-export default RankContainer;
+export default NewRankContainer;
