@@ -35,8 +35,9 @@ const Container = styled.div`
   min-width: 500px;
   height: 100%;
   display: flex;
-  background-color: white;
+  background-color: #f8f8f7;
   padding: 4px;
+  font-family: Helvetica, sans-serif;
 `;
 
 const Rank = styled.div`
@@ -65,7 +66,9 @@ const Division = styled.div`
 const Info = styled.div`
   display: inline;
   align-content: left;
-  text-align: center;
+
+  padding-top: 12px;
+  padding-left: 4px;
 `;
 
 const FighterIcon = styled.img`
