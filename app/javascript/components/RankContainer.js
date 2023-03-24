@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Droppable } from "react-beautiful-dnd";
 import { DragDropContext } from "react-beautiful-dnd";
 
-function NewRankContainer(props) {
+function RankContainer(props) {
   const { fighters } = props;
   const [fighterArray, setFighterArray] = useState(fighters);
   const renderFighterCards = (array) => {
@@ -71,4 +71,4 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-export default NewRankContainer;
+export default RankContainer;
