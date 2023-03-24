@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import RankContainer from "./RankContainer";
 import styled from "styled-components";
 
-function Index(props) {
+function Home(props) {
   const { fighters } = props;
 
   return (
@@ -15,8 +15,8 @@ function Index(props) {
 }
 
 const Wrapper = styled.div`
-  background: #ff3822;
-  min-height: 100vh;
+  height: 100%;
+  background-color: green;
 `;
 
-export default Index;
+export default Home;
