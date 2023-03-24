@@ -16,7 +16,7 @@ function Home(props) {
 
 const Wrapper = styled.div`
   height: 100%;
-  background-color: green;
+  background-color: #901d10;
 `;
 
 export default Home;

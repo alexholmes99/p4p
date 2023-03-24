@@ -37,34 +37,39 @@ function RankContainer(props) {
   };
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId={`1`}>
-        {(provided) => (
-          <div
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-            {...provided.dragHandleProps}
-          >
-            <Container>{renderFighterCards(fighterArray)}</Container>
-            {provided.placeholder}
-          </div>
-        )}
-      </Droppable>
-    </DragDropContext>
+    <Wrapper>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Droppable droppableId={`1`}>
+          {(provided) => (
+            <div
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+              {...provided.dragHandleProps}
+            >
+              <Container>{renderFighterCards(fighterArray)}</Container>
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
+    </Wrapper>
   );
 }
 
+const Wrapper = styled.div`
+  padding-top: 2%;
+  margin-bottom: 10%;
+  height: 80%;
+`;
 const Container = styled.div`
   text-align: center;
-
-  background-color: #ff3822;
-  height: 800px;
+  max-height: 1000px;
+  background-color: #cd6155;
   max-width: 45%;
   min-width: 532px;
-  align-content: center;
+
   margin: auto;
-  overflow-y: scroll;
-  overflow-x: none;
+  overflow: hidden;
 `;
 
 export default RankContainer;
