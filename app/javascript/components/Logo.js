@@ -9,8 +9,14 @@ function Logo(props) {
 
 const LogoContainer = styled.div`
   text-align: center;
-  font-size: 68px;
+  font-style: italic;
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 80px;
   padding-top: 10px;
+  paddding-bottom: 10px;
+  color: #ac564c;
+  text-shadow: 6px 6px #6c160c;
 `;
 
 Logo.propTypes = {
