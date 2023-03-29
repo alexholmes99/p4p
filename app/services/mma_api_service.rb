@@ -4,11 +4,11 @@ class MmaApiService
   include Singleton
 
   def self.champions
-    response = HTTParty.get('https://api.sportradar.us/mma/trial/v2/en/champions.json?api_key=bv5y39b93cx4daqarn3sfj9m')
+    response = HTTParty.get("https://api.sportradar.us/mma/trial/v2/en/champions.json?api_key=#{ENV['MMA_API_KEY']}")
   end
 
   def self.rankings
-    response = HTTParty.get('https://api.sportradar.com/mma/trial/v2/en/rankings.xml?api_key=bv5y39b93cx4daqarn3sfj9m')
+    response = HTTParty.get("https://api.sportradar.com/mma/trial/v2/en/rankings.xml?api_key=#{ENV['MMA_API_KEY']}")
     response["rankings"]["ranking"]
   end
 
